@@ -111,6 +111,7 @@ command line or using IDE, IntelliJ IDEA or Eclipse.
 Add dependencies to the build.gradle file. 
 
 .. code-block:: json
+
         plugins {
             id 'java'
         }
