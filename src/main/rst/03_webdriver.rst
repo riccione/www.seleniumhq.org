@@ -106,6 +106,39 @@ with this, we've provided an appendix which shows this.
 :ref:`Importing a maven project into IntelliJ IDEA <importing-maven-into-intellij-reference>`.
 :ref:`Importing a maven project into Eclipse <importing-maven-into-eclipse-reference>`.
 
+An another way to set up Selenium Java project is using Gradle. You can create a new project using 
+command line or using IDE, IntelliJ IDEA or Eclipse.
+Add dependencies to the build.gradle file. 
+
+.. code-block:: json
+        plugins {
+            id 'java'
+        }
+
+        group 'com.java.selenium'
+        version '1.0.0'
+
+        sourceCompatibility = 1.8
+
+        repositories {
+            mavenCentral()
+        }
+
+        dependencies {
+            /* Selenium */
+            // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+            compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+        }
+
+From a command-line, CD into the project directory and run gradle as follows.
+
+.. code-block:: bash
+
+		gradle build
+
+Gradle will download necessary dependencies. Dependencies are stored in .gradle directory.
+
+Then, import the project into your preferred development environment.
 
 C#
 ~~
